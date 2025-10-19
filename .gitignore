@@ -1,0 +1,9 @@
+# **Ignore local account tracking file**
+
+.current_github_account.txt
+
+.current_github_account
+
+# **macOS system files**
+
+.DS_Store
