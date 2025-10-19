@@ -33,21 +33,21 @@ This project was created to automate that process, ensuring that Git and GitHub 
 
 |------|----------|
 
-| `switch-github.ps1` | PowerShell script for Windows users |
-
-| `switch-github.sh` | Bash script for macOS and Linux users |
-
-| `README.md` | Main documentation (overview for all platforms) |
-
-| `README-Windows.md` | Windows PowerShell setup instructions |
-
-| `README-MacOS.md` | macOS setup instructions |
-
-| `README-Linux.md` | Linux/Ubuntu setup instructions |
+| `LICENSE` | Open-source license (MIT) |
 
 | `.gitignore` | Ignore temporary or local files |
 
-| `LICENSE` | Open-source license (MIT) |
+| `README-Linux.md` | Linux/Ubuntu setup instructions |
+
+| `README-MacOS.md` | macOS setup instructions |
+
+| `README-Windows.md` | Windows PowerShell setup instructions |
+
+| `README.md` | Main documentation (overview for all platforms) |
+
+| `switch-github.ps1` | PowerShell script for Windows users |
+
+| `switch-github.sh` | Bash script for macOS and Linux users |
 
 - --
 
