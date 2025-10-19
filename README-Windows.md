@@ -1,26 +1,26 @@
-GitHub Account Switcher Setup (Windows PowerShell + VS Code)
+# GitHub Account Switcher Setup (Windows)
 
-Overview
+## Overview
+This guide explains how to configure and use the PowerShell script on Windows to switch between personal and work/college GitHub accounts. It helps prevent issues where your commits or pushes use the wrong GitHub identity because Git retains the last authenticated account.
 
-This guide explains how to configure and use the PowerShell script on Windows to switch between personal and work/college GitHub accounts.
-It helps prevent issues where your commits or pushes use the wrong GitHub identity because Git retains the last authenticated account.
+### 1) Create a dedicated folder for scripts
 
-⸻
-
-1. Create a dedicated folder for scripts
-
+```powershell
 mkdir "$env:USERPROFILE\Documents\GitHubScripts"
 cd "$env:USERPROFILE\Documents\GitHubScripts"
+```
 
+### 2) Create the switcher script
 
-⸻
+Open Notepad to create the script:
 
-2. Create the switcher script
-
+```powershell
 notepad "$env:USERPROFILE\Documents\GitHubScripts\switch-github.ps1"
+```
 
-Paste the following code:
+Paste the following code into Notepad:
 
+```powershell
 param(
     [Parameter(Mandatory = $true)]
     [ValidateSet('personal','college')]
@@ -52,68 +52,67 @@ else {
 Write-Host "`nCurrent Git configuration:"
 git config --global user.name
 git config --global user.email
+```
 
 Save and close Notepad.
 
-⸻
+### 3) Allow scripts to run
 
-3. Allow scripts to run
-
+```powershell
 Set-ExecutionPolicy RemoteSigned -Scope CurrentUser
+```
 
+### 4) Test the script
 
-⸻
-
-4. Test the script
-
+```powershell
 cd "$env:USERPROFILE\Documents\GitHubScripts"
 powershell -ExecutionPolicy Bypass -File ".\switch-github.ps1" personal
 powershell -ExecutionPolicy Bypass -File ".\switch-github.ps1" college
+```
 
+### 5) Add a global shortcut
 
-⸻
+Open your PowerShell profile:
 
-5. Add a global shortcut
-
+```powershell
 notepad $PROFILE
+```
 
-At the bottom, add:
+Add the following function at the bottom:
 
+```powershell
 function ghswitch {
     param([string]$account)
     & "$env:USERPROFILE\Documents\GitHubScripts\switch-github.ps1" $account
 }
+```
 
-Reload the profile:
+Save and close Notepad.
 
+Reload your profile:
+
+```powershell
 . $PROFILE
+```
 
+### 6) Use it globally
 
-⸻
-
-6. Use it globally
-
+```powershell
 ghswitch personal
 ghswitch college
+```
 
+### Verification
 
-⸻
+Check your Git configuration:
 
-Verification
-
+```powershell
 git config user.name
 git config user.email
+```
 
-You can also check your GitHub CLI authentication:
+Check your GitHub CLI authentication status:
 
+```powershell
 gh auth status
-
-
-⸻
-
-
-
-
-
-⸻
-
+```
