@@ -118,6 +118,10 @@ gh auth status
 ```
 
 
+## Note
+
+Make sure to replace `personal` and `college` with the actual names of your GitHub account profiles as configured in your script.
+
 ## Author
 
 Created by [Ayobami Pase].
