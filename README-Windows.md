@@ -116,3 +116,8 @@ Check your GitHub CLI authentication status:
 ```powershell
 gh auth status
 ```
+
+
+## Author
+
+Created by [Ayobami Pase].

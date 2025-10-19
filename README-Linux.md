@@ -61,6 +61,10 @@ git config user.email
 
 Make sure to replace `personal` and `college` with the actual names of your GitHub account profiles as configured in your script.
 
-## Author
+
 
 This script and guide were created to simplify switching between multiple GitHub accounts on Linux / Ubuntu systems.
+
+## Author
+
+Created by [Ayobami Pase].

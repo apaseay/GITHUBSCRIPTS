@@ -89,3 +89,8 @@ This project was created to automate that process, ensuring that Git and GitHub 
 - Public versions of the scripts should keep **only placeholder values** for usernames and emails.
 - Never commit your personal or institutional details to public repositories.
 - --
+
+
+## Author
+
+Created by [Ayobami Pase].
